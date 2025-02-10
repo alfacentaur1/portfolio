@@ -7,20 +7,20 @@ import TiltedCard from "./TiltedCard";
 export const Contact = () => {
 
   return (
-    <section id="contact" className="py-16 flex flex-col justify-center items-center pt-55 pb-25 z-50">
+    <section id="contact" className="flex flex-col justify-center items-center h-screen py-16 pt-55 pb-25 z-50 m-0">
                 <BlurText
                     text="Oh, my page is ending here, thank you for scrolling so far!"
                     delay={150}
                     animateBy="words"
                     direction="top"
-                    className="text-5xl mb-12"
+                    className="text-5xl mb-12 flex flex-wrap justify-center items-center"
                 />
                 <BlurText
                     text="If you are interested, let's stay in touch!"
                     delay={150}
                     animateBy="words"
                     direction="top"
-                    className="text-2xl mb-30"
+                    className="text-2xl mb-30 flex flex-wrap justify-center items-center"
                 />
         <div className="z-50 flex justify-evenly items-center w-[50%] flex-wrap mb-10">
         <a href="https://www.linkedin.com/in/filipkopecky/">
