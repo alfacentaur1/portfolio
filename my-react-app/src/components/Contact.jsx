@@ -1,41 +1,72 @@
 import BlurText from "./BlurText";
-import Dock from "./Dock";
-import linkedin from "./imgs/linkedin1.jpg";
-import github from "./imgs/github.png";
+import linkedin from "./imgs/linkedin2.png";
+import github from "./imgs/github2.png";
+import StarBorder from './StarBorder';
+import TiltedCard from "./TiltedCard";
 
 export const Contact = () => {
-    const items = [
-        { 
-          icon: <img src={linkedin} alt="LinkedIn" className="w-6 h-6" />, 
-          label: "LinkedIn", 
-          onClick: () => window.open("https://www.linkedin.com/in/filipkopecky", "_blank") 
-        },
-        { 
-          icon: <img src={github} alt="GitHub" className="w-6 h-6" />, 
-          label: "GitHub", 
-          onClick: () => window.open("https://github.com/alfacentaur1", "_blank") 
-        },
-      ];
 
   return (
-    <section id="contact" className="py-16 flex flex-col justify-center items-center pt-55 pb-25">
-      <BlurText
-        text="Oh, my page is ending here, thank you for scrolling so far!"
-        delay={150}
-        animateBy="words"
-        direction="top"
-        className="text-5xl mb-8"
-      />
-      <BlurText
-        text="If you are interested, let's stay in touch!"
-        delay={150}
-        animateBy="words"
-        direction="top"
-        className="text-3xl mb-8"
-      />
-      <div className=" bottom-0 left-1/2 transform -translate-x-1/2 z-50 mb-10">
-      <Dock items={items} panelHeight={68} baseItemSize={50} magnification={70} />
-      </div>
+    <section id="contact" className="py-16 flex flex-col justify-center items-center pt-55 pb-25 z-50">
+                <BlurText
+                    text="Oh, my page is ending here, thank you for scrolling so far!"
+                    delay={150}
+                    animateBy="words"
+                    direction="top"
+                    className="text-5xl mb-12"
+                />
+                <BlurText
+                    text="If you are interested, let's stay in touch!"
+                    delay={150}
+                    animateBy="words"
+                    direction="top"
+                    className="text-2xl mb-30"
+                />
+        <div className="z-50 flex justify-evenly items-center w-[50%] flex-wrap mb-10">
+        <a href="">
+            <TiltedCard
+            imageSrc={linkedin}
+            altText="linkedin"
+            captionText="Yep, that's me!"
+            containerHeight="150px"
+            containerWidth="150px"
+            imageHeight="150px"
+            imageWidth="150px"
+            rotateAmplitude={12}
+            scaleOnHover={1.2}
+            showMobileWarning={false}
+            showTooltip={true}
+            displayOverlayContent={true}
+            overlayContent={
+                <p className="tilted-card-demo-text">
+                LinkedIn
+                </p>
+            }
+            />
+        </a>
+        <a href="">
+            <TiltedCard
+            imageSrc={github}
+            altText="github"
+            captionText="Check out what im building right now!"
+            containerHeight="150px"
+            containerWidth="150px"
+            imageHeight="150px"
+            imageWidth="150px"
+            rotateAmplitude={12}
+            scaleOnHover={1.2}
+            showMobileWarning={false}
+            showTooltip={true}
+            displayOverlayContent={true}
+            overlayContent={
+                <p className="tilted-card-demo-text">
+                GitHub
+                </p>
+            }
+            />
+        </a>
+        </div>
+
     </section>
   );
 };

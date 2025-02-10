@@ -13,7 +13,7 @@ import '../index.css';
 import calc from "./imgs/calc.png"; 
 import php from "./imgs/php.png"; 
 import rps from "./imgs/rps.png"; 
-import sms from "./imgs/sms.png";
+import sms from "./imgs/realitky.png";
 
 function debounce(func, wait) {
   let timeout
